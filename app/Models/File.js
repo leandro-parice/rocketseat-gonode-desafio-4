@@ -11,6 +11,10 @@ class File extends Model {
   getUrl ({ id }) {
     return `${Env.get('APP_URL')}/files/${id}`
   }
+
+  tasks () {
+    return this.hasMany('App/Models/Task')
+  }
 }
 
 module.exports = File
